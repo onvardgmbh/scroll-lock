@@ -5,5 +5,7 @@ Lock scrolling to an element, so the parent does not scroll even if the element 
 
 Usage:
 ```js
-lockScroll(element);
+scrollLock(element);
 ```
+
+Check the [example](https://onvardgmbh.github.io/scroll-lock/).
