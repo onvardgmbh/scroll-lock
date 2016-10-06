@@ -1,6 +1,6 @@
 {
   "name": "scroll-lock",
-  "version": "0.1.0"
+  "version": "0.1.0",
   "description": "Lock scrolling to an element, so the parent does not scroll, even if the element reaches the top or bottom.",
   "license": "MIT",
   "author": "Galdor Takacs <galdor.takacs@gmail.com>",
