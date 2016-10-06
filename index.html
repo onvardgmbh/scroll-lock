@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Scroll lock</title>
+<style type="text/css">
+.max {
+	max-height: 200px;
+	overflow: auto;
+}
+
+.high {
+	height: 2000px;
+	background-color: #ccc;
+}
+</style>
+
+<h1>Scroll lock</h1>
+
+<h2>A locked element:</h2>
+<div class="max scroll-locked">
+	<div class="high">
+		<p>When the mouse is on this inner <code>div</code> when
+		scrolling or starting to swipe, and it already reached the top or
+		bottom, the parent element will not scroll.</p>
+	</div>
+</div>
+
+<h2>Default behavior:</h2>
+<div class="max">
+	<div class="high">
+		<p>Here is another non-locked div for comparison.</p>
+	</div>
+</div>
+
+<h2>More content...</h2>
+<div class="high">
+	<p>And this <code>p</code> is just here to make the body long
+	enough for scrolling</p>
+</div>
+
+<!-- include the library -->
+<script src="scroll-lock.js"></script>
+
+<!-- lock all elements with the .scroll-locked class -->
+<script>
+Array.prototype.forEach.call(
+	document.querySelectorAll('.scroll-locked'),
+	function(element) {
+		scrollLock(element);
+	});
+</script>
+</html>
